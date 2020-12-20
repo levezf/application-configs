@@ -31,6 +31,6 @@ logging:
 ## Eureka client configuration
 eureka:
   client:
-    eureka-server-u-r-l-context: http://localhost:8082/eureka
+    eureka-server-u-r-l-context: http://localhost:8082
     service-url:
-      defaultZone: http://localhost:8082/eureka
+      defaultZone: http://localhost:8082
