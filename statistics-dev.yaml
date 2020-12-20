@@ -15,5 +15,5 @@ logging:
 ## Eureka client configuration
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/
