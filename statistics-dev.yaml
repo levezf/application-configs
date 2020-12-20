@@ -15,5 +15,7 @@ logging:
 ## Eureka client configuration
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/
+    registerWithEureka: true
+    fetchRegistry: true  
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka
