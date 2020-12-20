@@ -1,0 +1,36 @@
+server:
+    port: 8083
+application:
+  welcome:
+    message: Statistics of COVID
+
+## Spring datasource configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none # UPDATE -- When you launch the application for the first time - switch "none" at create"
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: info
+    org.hibernate: debug
+    
+## Eureka client configuration
+eureka:
+  client:
+    eureka-server-u-r-l-context: http://localhost:8082/eureka
+    service-url:
+      defaultZone: http://localhost:8082/eureka
