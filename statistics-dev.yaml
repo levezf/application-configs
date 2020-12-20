@@ -15,6 +15,7 @@ logging:
 ## Eureka client configuration
 eureka:
   client:
-    eureka-server-u-r-l-context: http://localhost:8082
-    service-url:
-      defaultZone: http://localhost:8082
+    serviceUrl:
+      defaultZone: http://localhost:8761/
+    healthcheck:
+      enabled: true
